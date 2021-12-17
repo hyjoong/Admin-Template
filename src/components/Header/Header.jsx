@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { NotificationsNone, Language, Settings } from "@material-ui/icons";
+import palette from "../../styles/palette";
 
 const Header = () => {
   return (
@@ -25,7 +26,6 @@ const Header = () => {
     </Topbar>
   );
 };
-
 const Topbar = styled.header`
   width: 100%;
   height: 50px;

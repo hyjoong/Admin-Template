@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
+import Home from "./pages/Home/Home";
 
 const App = () => {
   return (
@@ -8,7 +9,7 @@ const App = () => {
       <Header />
       <MainContainer>
         <Sidebar />
-        <div className="others"> </div>
+        <Home />
       </MainContainer>
     </div>
   );
