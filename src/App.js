@@ -2,16 +2,20 @@ import styled from "styled-components";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Home from "./pages/Home/Home";
-
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Question from "./pages/Home/Question";
 const App = () => {
   return (
-    <div>
+    <Router>
       <Header />
       <MainContainer>
         <Sidebar />
-        <Home />
+        <Routes>
+          <Route exact path="/" element={<Home />}></Route>
+          <Route path="/question" element={<Question />}></Route>
+        </Routes>
       </MainContainer>
-    </div>
+    </Router>
   );
 };
 
