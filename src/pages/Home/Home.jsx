@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import Chart from "../../components/Chart/Chart";
+import { userData } from "../../components/Chart/dummyData";
 import Title from "../../components/common/Title";
 import FeaturedInfo from "../../components/FeaturedInfo/FeaturedInfo";
 
@@ -26,13 +28,15 @@ const Home = () => {
           secondCount={toTalsecessionCount}
         />
       </FeaturedInfoContainer>
+      <Title title="실시간 접속 통계" />
+      <Chart data={userData} grid />
     </HomeWrapper>
   );
 };
 
 const HomeWrapper = styled.div`
   flex: 4;
-  background-color: #e5e5e5;
+  background-color: #ffffff;
 `;
 
 const FeaturedInfoContainer = styled.div`
