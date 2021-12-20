@@ -3,8 +3,8 @@ import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Home from "./pages/Home/Home";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Question from "./pages/Home/Question";
-import User from "./pages/Home/User";
+import Question from "./pages/Question/Question";
+import User from "./pages/User/User";
 import Detail from "./components/Detail/Detail";
 
 const App = () => {
