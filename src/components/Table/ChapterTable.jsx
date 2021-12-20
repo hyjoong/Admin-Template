@@ -40,7 +40,7 @@ const ChapterTable = () => {
       renderCell: (params) => {
         return (
           <>
-            <Link to={"/user/" + params.row.id}>
+            <Link to={"/detail/" + params.row.id}>
               <button
                 className="EditButton"
                 style={{
@@ -48,7 +48,7 @@ const ChapterTable = () => {
                   outline: "none",
                   borderRadius: "10px",
                   padding: "5px 10px",
-                  backgroundColor: "#3bb077",
+                  backgroundColor: "#36a56f",
                   color: "white",
                   cursor: "pointer",
                 }}
