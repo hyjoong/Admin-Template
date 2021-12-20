@@ -1,16 +1,21 @@
 import React from "react";
+import { useRecoilValue } from "recoil";
 import styled from "styled-components";
 import Chart from "../../components/Chart/Chart";
-import { userData } from "../../components/Chart/dummyData";
 import Title from "../../components/common/Title";
 import FeaturedInfo from "../../components/FeaturedInfo/FeaturedInfo";
-
-const newCount = 41;
-const totalCount = 215;
-const secessionCount = 7;
-const toTalsecessionCount = 17;
+import {
+  userNewState,
+  userSecessionState,
+  userTotalecessionState,
+  userTotalState,
+} from "../../components/recoil/userState";
 
 const Home = () => {
+  const newCount = useRecoilValue(userNewState);
+  const totalCount = useRecoilValue(userTotalState);
+  const secessionCount = useRecoilValue(userSecessionState);
+  const toTalsecessionCount = useRecoilValue(userTotalecessionState);
   return (
     <HomeWrapper>
       <Title title="사용자 통계" />
@@ -29,7 +34,7 @@ const Home = () => {
         />
       </FeaturedInfoContainer>
       <Title title="실시간 접속 통계" />
-      <Chart data={userData} grid />
+      <Chart grid />
     </HomeWrapper>
   );
 };

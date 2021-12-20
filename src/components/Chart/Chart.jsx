@@ -9,12 +9,15 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { useRecoilValue } from "recoil";
+import { getUserState } from "../recoil/userState";
 
-const Chart = ({ data, dataKey, grid }) => {
+const Chart = ({ grid }) => {
+  const userList = useRecoilValue(getUserState);
   return (
     <ChartWrapper>
       <ResponsiveContainer width="100%" aspect={4 / 1}>
-        <LineChart data={data}>
+        <LineChart data={userList.data}>
           <XAxis dataKey="name" stroke="#5550bd" />
           <YAxis />
           <Line type="monotone" dataKey="Time User" stroke="#5550bd" />
