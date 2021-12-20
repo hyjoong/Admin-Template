@@ -12,7 +12,7 @@ const App = () => {
         <Sidebar />
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
-          <Route path="/question" element={<Question />}></Route>
+          <Route exact path="/question" element={<Question />}></Route>
         </Routes>
       </MainContainer>
     </Router>
@@ -21,9 +21,6 @@ const App = () => {
 
 const MainContainer = styled.div`
   display: flex;
-  .others {
-    flex: 4;
-  }
 `;
 
 export default App;

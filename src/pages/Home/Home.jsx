@@ -35,7 +35,6 @@ const Home = () => {
 };
 
 const HomeWrapper = styled.div`
-  flex: 4;
   background-color: #ffffff;
 `;
 

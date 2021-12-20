@@ -55,7 +55,7 @@ const Sidebar = () => {
 };
 
 const SideWrapper = styled.div`
-  flex: 1;
+  width: 300px;
   height: calc(100vh - 50px);
   position: sticky;
   top: 50px;
